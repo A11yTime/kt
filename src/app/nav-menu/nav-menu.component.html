@@ -16,7 +16,7 @@
     </button>
     <div [class.active]="isActive" class="navbar-links" id="navbar-links">
       <ul>
-        <li><a routerLink="/" routerLinkActive="router-link-active" (click)="closeMenu()">Home</a></li>
+        <li><a routerLink="/" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a></li>
          <li><a routerLink="/python" routerLinkActive="router-link-active" (click)="closeMenu()">Python</a></li>
         <li><a routerLink="/ai" routerLinkActive="router-link-active" (click)="closeMenu()">AI</a></li>
         <li><a routerLink="/service" routerLinkActive="router-link-active" (click)="closeMenu()">Service</a></li>
