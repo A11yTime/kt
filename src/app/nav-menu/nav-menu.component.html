@@ -1,0 +1,30 @@
+<header class="navbar">
+  <div class="brand-title">
+    <a routerLink="/"><img src="assets/Images/ulogo.svg" alt="universal approach" /></a>
+  </div>
+  <nav>
+    <button
+      aria-label="Site navigation"
+      class="toggle-button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isActive"
+      #toggleButton
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div [class.active]="isActive" class="navbar-links" id="navbar-links">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="router-link-active" (click)="closeMenu()">Home</a></li>
+         <li><a routerLink="/python" routerLinkActive="router-link-active" (click)="closeMenu()">Python</a></li>
+        <li><a routerLink="/ai" routerLinkActive="router-link-active" (click)="closeMenu()">AI</a></li>
+        <li><a routerLink="/service" routerLinkActive="router-link-active" (click)="closeMenu()">Service</a></li>
+        <li><a routerLink="/resource" routerLinkActive="router-link-active" (click)="closeMenu()">Resource</a></li>
+        <li><a routerLink="/article" routerLinkActive="router-link-active" (click)="closeMenu()">Articles</a></li>
+        <li><a routerLink="/checklist" routerLinkActive="router-link-active" (click)="closeMenu()">Checklist</a></li>
+        <li><a routerLink="/pdf" routerLinkActive="router-link-active" (click)="closeMenu()">PDF</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>

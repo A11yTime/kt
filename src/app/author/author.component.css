@@ -1,0 +1,46 @@
+.author-profile {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.author-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.author-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2b6cb0;
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-name {
+  font-size: 1.5rem;
+  color: #2b6cb0;
+  margin: 0 0 0.25rem;
+}
+
+.author-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin: 0 0 1rem;
+}
+
+.author-bio {
+  color: #2d3748;
+  line-height: 1.6;
+}

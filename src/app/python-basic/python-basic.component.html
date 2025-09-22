@@ -1,0 +1,129 @@
+<article class="python-basics-article">
+  <h1>Python Basics: A Comprehensive Overview</h1>
+  <p>
+    Python is a powerful, high-level, and easy-to-learn programming language
+    that is widely used in web development, data science, automation, artificial intelligence, and more.
+    Designed with readability in mind, Python uses simple syntax similar to English,
+    making it ideal for beginners and professionals alike.
+  </p>
+
+  <section>
+    <h2>1. Getting Started</h2>
+    <p>
+      To run Python, you need to install it from
+      <a href="https://python.org" target="_blank" rel="noopener">python.org</a>,
+      or use an online IDE like Replit, Google Colab, or Jupyter Notebooks.
+    </p>
+    <pre><code>print("Hello, World!")</code></pre>
+    <p>This line uses the built-in <code>print()</code> function to output text to the screen.</p>
+  </section>
+
+  <section>
+    <h2>2. Variables and Data Types</h2>
+    <p>Variables store data. You don't need to declare the type explicitly in Python:</p>
+    <pre><code>name = "Alice"        # String
+age = 25              # Integer
+height = 5.6          # Float
+is_student = True     # Boolean
+    </code></pre>
+    <p>Common data types include:</p>
+    <ul>
+      <li><code>int</code> – integers (e.g., 1, 100)</li>
+      <li><code>float</code> – decimals (e.g., 3.14)</li>
+      <li><code>str</code> – strings (e.g., "Hello")</li>
+      <li><code>bool</code> – Boolean values (<code>True</code> or <code>False</code>)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Operators</h2>
+    <p>Python supports arithmetic and logical operations:</p>
+    <pre><code># Arithmetic
+x = 10 + 5       # 15
+y = 20 - 8       # 12
+z = 4 * 3        # 12
+w = 15 / 3       # 5.0
+
+# Comparison
+a == b, a != b, a &gt; b, a &lt; b
+
+# Logical
+and, or, not
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>4. Control Flow: if, elif, else</h2>
+    <p>Python uses indentation (usually 4 spaces) to define blocks of code:</p>
+    <pre><code>if age &gt; 18:
+    print("Adult")
+elif age == 18:
+    print("Just turned adult")
+else:
+    print("Minor")
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>5. Loops: for and while</h2>
+    <p>Use loops to repeat actions:</p>
+    <pre><code># For loop
+for i in range(5):
+    print(i)   # 0 to 4
+
+# While loop
+count = 0
+while count &lt; 5:
+    print(count)
+    count += 1
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>6. Functions</h2>
+    <p>Functions allow code reuse and organization:</p>
+    <pre><code>def greet(name):
+    return f"Hello, {{ '{' }}name{{ '}' }}!"
+
+print(greet("Alice"))
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>7. Data Structures</h2>
+    <p>Python has built-in structures for storing collections:</p>
+    <ul>
+      <li><strong>List</strong> – ordered, mutable: <code>fruits = ["apple", "banana"]</code></li>
+      <li><strong>Tuple</strong> – ordered, immutable: <code>coords = (10, 20)</code></li>
+      <li><strong>Set</strong> – unordered, unique: <code>colors = {{ '{' }}"red", "blue"{{ '}' }}</code></li>
+      <li><strong>Dict</strong> – key-value pairs: <code>person = {{ '{' }}"name": "Alice", "age": 25{{ '}' }}</code></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Comments and Documentation</h2>
+    <p>Use <code>#</code> for single-line comments and triple quotes <code>"""</code> for documentation:</p>
+    <pre><code># This is a comment
+"""This function greets the user"""
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>9. Importing Modules</h2>
+    <p>Modules let you use additional functionality:</p>
+    <pre><code>import math
+print(math.sqrt(16))  # 4.0
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Conclusion</h2>
+    <p>
+      Python's simplicity, combined with its powerful libraries and community support,
+      makes it one of the best languages to start programming. Once you master the basics,
+      you can explore areas like web development with Flask/Django, data analysis with Pandas,
+      or automation with scripts.
+    </p>
+  </section>
+  <app-author></app-author>
+</article>
