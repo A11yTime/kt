@@ -1,0 +1,196 @@
+<nav class="navbar">
+  <h1>🛠️ VS Code Installation & Setup Tutorial</h1>
+  <ul>
+    <li><a (click)="scrollTo('intro'); $event.preventDefault()" href="#">Introduction</a></li>
+    <li><a (click)="scrollTo('step1'); $event.preventDefault()" href="#">Step 1: Download</a></li>
+    <li><a (click)="scrollTo('step2'); $event.preventDefault()" href="#">Step 2: Configuration</a></li>
+    <li><a (click)="scrollTo('step3'); $event.preventDefault()" href="#">Step 3: Extensions</a></li>
+    <li><a (click)="scrollTo('step4'); $event.preventDefault()" href="#">Step 4: Personalize</a></li>
+    <li><a (click)="scrollTo('step5'); $event.preventDefault()" href="#">Step 5: Project Setup</a></li>
+    <li><a (click)="scrollTo('step6'); $event.preventDefault()" href="#">Step 6: Git Integration</a></li>
+    <li><a (click)="scrollTo('step7'); $event.preventDefault()" href="#">Step 7: Language Setup</a></li>
+    <li><a (click)="scrollTo('step8'); $event.preventDefault()" href="#">Step 8: Debugging</a></li>
+    <li><a (click)="scrollTo('step9'); $event.preventDefault()" href="#">Step 9: Issues</a></li>
+    <li><a (click)="scrollTo('step10'); $event.preventDefault()" href="#">Step 10: Tips</a></li>
+    <li><a (click)="scrollTo('bonus'); $event.preventDefault()" href="#">Bonus</a></li>
+    <li><a (click)="scrollTo('summary'); $event.preventDefault()" href="#">Summary</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="intro">
+    <h2>🔍 What is Visual Studio Code?</h2>
+    <p>Visual Studio Code (VS Code) is a lightweight, free, open-source code editor developed by Microsoft. It supports multiple languages (JavaScript, Python, C++, etc.), has built-in Git support, debugging, IntelliSense, and a rich ecosystem of extensions.</p>
+  </section>
+
+  <section id="step1">
+    <h2>📦 Step 1: Downloading Visual Studio Code</h2>
+    <p><strong>✅ Official Website:</strong></p>
+    <p>Go to: <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">https://code.visualstudio.com/</a></p>
+
+    <h3>🖥️ For Windows:</h3>
+    <ul>
+      <li>Click "Download for Windows".</li>
+      <li>Run the downloaded .exe file.</li>
+      <li>Follow the installation wizard:
+        <ul>
+          <li>Accept the license agreement.</li>
+          <li>Choose the destination folder.</li>
+          <li>Check "Add to PATH" (important!).</li>
+          <li>Optionally check:
+            <ul>
+              <li>"Register Code as editor for supported file types"</li>
+              <li>"Add 'Open with Code' to Windows Explorer context menu"</li>
+            </ul>
+          </li>
+          <li>Click Install.</li>
+        </ul>
+      </li>
+      <li>Launch VS Code when done.</li>
+    </ul>
+
+    <h3>🍎 For macOS:</h3>
+    <ul>
+      <li>Download the .zip file.</li>
+      <li>Open the .zip – it extracts the Visual Studio Code.app.</li>
+      <li>Drag it into the Applications folder.</li>
+      <li>(Optional) Open Terminal and run the following to add code command to PATH:
+        <pre><code>sudo ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code /usr/local/bin/code</code></pre>
+      </li>
+    </ul>
+
+    <h3>🐧 For Linux:</h3>
+    <p><strong>Ubuntu/Debian:</strong></p>
+    <pre><code>sudo apt update
+sudo apt install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt update
+sudo apt install code
+</code></pre>
+
+    <p><strong>Fedora:</strong></p>
+    <pre><code>sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+sudo dnf check-update
+sudo dnf install code
+</code></pre>
+  </section>
+
+  <section id="step2">
+    <h2>🧰 Step 2: Basic Configuration</h2>
+    <ol>
+      <li><strong>Launch VS Code</strong>
+        <p>You can now open VS Code from:</p>
+        <ul>
+          <li>The app menu</li>
+          <li>Windows start menu</li>
+          <li>Terminal using <code>code .</code></li>
+        </ul>
+      </li>
+      <li><strong>Interface Overview</strong>
+        <ul>
+          <li>Explorer: View your project folder/files.</li>
+          <li>Search: Global search across files.</li>
+          <li>Source Control: Git integration.</li>
+          <li>Run & Debug: Launch debuggers.</li>
+          <li>Extensions: Install new tools.</li>
+          <li>Settings: Customize your editor.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Add remaining sections with corresponding ids (step3, step4, ..., bonus, summary) -->
+
+  <section id="step3">
+    <h2>🧩 Step 3: Installing Extensions</h2>
+    <p><strong>Popular Extensions:</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Python (Microsoft)</td>
+          <td>Python development</td>
+        </tr>
+        <tr>
+          <td>Prettier</td>
+          <td>Code formatter</td>
+        </tr>
+        <tr>
+          <td>ESLint</td>
+          <td>Linting for JS/TS</td>
+        </tr>
+        <tr>
+          <td>Live Server</td>
+          <td>Launch web server with live reload</td>
+        </tr>
+        <tr>
+          <td>GitLens</td>
+          <td>Git enhancements</td>
+        </tr>
+        <tr>
+          <td>Material Icon Theme</td>
+          <td>File icons</td>
+        </tr>
+        <tr>
+          <td>Dracula / One Dark Pro</td>
+          <td>Popular color themes</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>How to Install Extensions:</strong></p>
+    <ol>
+      <li>Click on Extensions (⇧⌘X / Ctrl+Shift+X).</li>
+      <li>Search for an extension.</li>
+      <li>Click Install.</li>
+    </ol>
+  </section>
+
+  <!-- Continue similarly for the other steps -->
+
+  <section id="bonus">
+    <h2>🧠 Bonus: Sync Settings Across Devices</h2>
+    <p><strong>Settings Sync (via GitHub or Microsoft Account):</strong></p>
+    <p>Turn on via gear icon in bottom left → Turn on Settings Sync</p>
+    <p><strong>Syncs:</strong></p>
+    <ul>
+      <li>Settings</li>
+      <li>Extensions</li>
+      <li>Keyboard Shortcuts</li>
+      <li>Themes</li>
+    </ul>
+  </section>
+
+  <section id="summary">
+    <h2>✅ Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Installed VS Code</td><td>✅</td></tr>
+        <tr><td>Installed extensions</td><td>✅</td></tr>
+        <tr><td>Personalized theme/icons</td><td>✅</td></tr>
+        <tr><td>Set up project/workspace</td><td>✅</td></tr>
+        <tr><td>Set up Git</td><td>✅</td></tr>
+        <tr><td>Language-specific setup</td><td>✅</td></tr>
+      </tbody>
+    </table>
+    <p><strong>📚 Learn More</strong></p>
+    <ul>
+      <li><a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener">Official Docs</a></li>
+      <li><a href="https://www.youtube.com/@code" target="_blank" rel="noopener">VS Code YouTube Channel</a></li>
+    </ul>
+  </section>
+</main>
