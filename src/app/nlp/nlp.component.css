@@ -1,0 +1,28 @@
+.nlp-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #222;
+}
+
+h1 {
+  color: #005a9c;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h2, h3 {
+  color: #2a2a2a;
+  margin-top: 1.5rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+strong {
+  color: #0057b7;
+}

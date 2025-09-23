@@ -17,13 +17,13 @@
     <div [class.active]="isActive" class="navbar-links" id="navbar-links">
       <ul>
         <li><a routerLink="/" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a></li>
+        <li><a routerLink="/vs" routerLinkActive="router-link-active" (click)="closeMenu()">Tools</a></li>
          <li><a routerLink="/python" routerLinkActive="router-link-active" (click)="closeMenu()">Python</a></li>
         <li><a routerLink="/ai" routerLinkActive="router-link-active" (click)="closeMenu()">AI</a></li>
-        <li><a routerLink="/vs" routerLinkActive="router-link-active" (click)="closeMenu()">Tools</a></li>
         <li><a routerLink="/ml" routerLinkActive="router-link-active" (click)="closeMenu()">ML</a></li>
-        <li><a routerLink="/article" routerLinkActive="router-link-active" (click)="closeMenu()">Articles</a></li>
-        <li><a routerLink="/checklist" routerLinkActive="router-link-active" (click)="closeMenu()">Checklist</a></li>
-        <li><a routerLink="/pdf" routerLinkActive="router-link-active" (click)="closeMenu()">PDF</a></li>
+        <li><a routerLink="/dl" routerLinkActive="router-link-active" (click)="closeMenu()">DL</a></li>
+        <li><a routerLink="/nlp" routerLinkActive="router-link-active" (click)="closeMenu()">NLP</a></li>
+        <!-- <li><a routerLink="/pdf" routerLinkActive="router-link-active" (click)="closeMenu()">PDF</a></li> -->
       </ul>
     </div>
   </nav>

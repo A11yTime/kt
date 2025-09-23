@@ -7,6 +7,8 @@ import { AiBasicComponent } from './ai-basic/ai-basic.component';
 import { AuthorComponent } from './author/author.component';
 import { VsCodeComponent } from './vs-code/vs-code.component';
 import { MlLearnComponent } from './ml-learn/ml-learn.component';
+import { DlComponent } from './dl/dl.component';
+import { NlpComponent } from './nlp/nlp.component';
 
 export const routes: Routes = [
   {
@@ -30,8 +32,12 @@ export const routes: Routes = [
       { path: 'ml', component: MlLearnComponent,
         data: { title: 'Machine Learning - Universal Approach' }    
        },
-    //   { path: 'checklist', component: ChecklistComponent },
-    //   { path: 'pdf', component: PdfComponent },
+    { path: 'dl', component: DlComponent,
+      data: { title: 'Deep Learning - Universal Approach' }
+    },
+    { path: 'nlp', component: NlpComponent,
+      data: { title: 'Natural Language Processing - Universal Approach' }
+    },
     ]
   }
 ];

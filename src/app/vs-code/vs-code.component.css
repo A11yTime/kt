@@ -2,14 +2,13 @@
 :host {
   display: block;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212; /* dark background */
-  color: white;              /* white text */
+  background-color: #121212; 
+  color: white;              
   line-height: 1.6;
   padding: 1rem 2rem;
   min-height: 100vh;
 }
 
-/* Navbar styles */
 .navbar {
   background-color: #007acc;
   color: white;
@@ -40,7 +39,6 @@
   list-style: none;
 }
 
-/* Navbar links styled as pills */
 .navbar ul li a {
   display: inline-block;
   background-color: #005a9e;
@@ -62,13 +60,12 @@
   text-decoration: none;
 }
 
-/* Main content */
 main {
   max-width: 900px;
   margin: 2rem auto;
 }
 
-/* Section styling */
+
 section {
   margin-bottom: 3rem;
 }
@@ -85,7 +82,6 @@ h3 {
   color: #ffcc00;
 }
 
-/* Paragraphs and lists */
 p, li {
   font-size: 1rem;
   color: #ddd;
@@ -97,7 +93,6 @@ ul, ol {
   margin-bottom: 1rem;
 }
 
-/* Code blocks */
 pre {
   background-color: #1e1e1e;
   color: #d4d4d4;
@@ -109,7 +104,6 @@ pre {
   margin: 1rem 0;
 }
 
-/* Inline code */
 code {
   background-color: #333;
   color: #ffcc00;
@@ -119,7 +113,6 @@ code {
   font-size: 0.95rem;
 }
 
-/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -141,7 +134,6 @@ tbody tr:nth-child(even) {
   background-color: #1f1f1f;
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .navbar ul {
     flex-direction: column;
@@ -151,4 +143,17 @@ tbody tr:nth-child(even) {
   main {
     padding: 0 1rem;
   }
+}
+
+a {
+  color: white; 
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  color: #ffcc00; 
+  background-color: transparent;
+  text-decoration: underline;
+  outline: none;
 }

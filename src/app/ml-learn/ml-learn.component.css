@@ -7,7 +7,7 @@
   color: #000000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
   border-radius: 10px;
 }
 
@@ -101,7 +101,7 @@ pre {
   overflow-x: auto;
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.95rem;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  /* box-shadow: inset 0 0 5px rgba(0,0,0,0.1); */
 }
 
 /* Paragraph styling */
