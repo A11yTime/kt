@@ -6,6 +6,7 @@ import { PythonBasicComponent } from './python-basic/python-basic.component';
 import { AiBasicComponent } from './ai-basic/ai-basic.component';
 import { AuthorComponent } from './author/author.component';
 import { VsCodeComponent } from './vs-code/vs-code.component';
+import { MlLearnComponent } from './ml-learn/ml-learn.component';
 
 export const routes: Routes = [
   {
@@ -26,7 +27,9 @@ export const routes: Routes = [
       { path: 'vs', component: VsCodeComponent, 
         data: { title: 'VS Code - Universal Approach' }
        },
-    //   { path: 'article', component: ArticleComponent },
+      { path: 'ml', component: MlLearnComponent,
+        data: { title: 'Machine Learning - Universal Approach' }    
+       },
     //   { path: 'checklist', component: ChecklistComponent },
     //   { path: 'pdf', component: PdfComponent },
     ]

@@ -1,0 +1,193 @@
+<div class="container">
+    <h1>📘 Machine Learning (ML) Tutorial</h1>
+
+    <h2>📌 Table of Contents</h2>
+    <ul>
+      <li><a [routerLink]="[]" fragment="what-is-ml">What is Machine Learning?</a></li>
+      <li><a [routerLink]="[]" fragment="types-of-ml">Types of Machine Learning</a></li>
+      <li><a [routerLink]="[]" fragment="ml-workflow">ML Workflow</a></li>
+      <li><a [routerLink]="[]" fragment="popular-algorithms">Popular ML Algorithms</a></li>
+      <li><a [routerLink]="[]" fragment="tools-libraries">Tools and Libraries</a></li>
+      <li><a [routerLink]="[]" fragment="hands-on">Hands-On: ML with Python (Scikit-Learn)</a></li>
+      <li><a [routerLink]="[]" fragment="challenges">Common Challenges in ML</a></li>
+      <li><a [routerLink]="[]" fragment="next-steps">Where to Go Next</a></li>
+    </ul>
+
+    <h2 id="what-is-ml">🔍 What is Machine Learning?</h2>
+    <p>Machine Learning is a branch of Artificial Intelligence (AI) where computers learn from data without being explicitly programmed.</p>
+    <p><strong>In traditional programming:</strong><br>Input + Program = Output</p>
+    <p><strong>In Machine Learning:</strong><br>Input + Output → Algorithm learns → Model → New Input → Prediction</p>
+
+    <h2 id="types-of-ml">🧠 Types of Machine Learning</h2>
+    <ol>
+      <li><strong>Supervised Learning</strong>
+        <ul>
+          <li>Trained on labeled data.</li>
+          <li>Goal: Predict output (label) from input data.</li>
+          <li>📌 Examples:
+            <ul>
+              <li>Regression: House price prediction.</li>
+              <li>Classification: Spam detection.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Unsupervised Learning</strong>
+        <ul>
+          <li>Trained on unlabeled data.</li>
+          <li>Goal: Find hidden patterns or structure.</li>
+          <li>📌 Examples:
+            <ul>
+              <li>Clustering: Customer segmentation.</li>
+              <li>Dimensionality Reduction: PCA for visualization.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Semi-Supervised Learning</strong>
+        <ul>
+          <li>Mix of labeled and unlabeled data.</li>
+          <li>Useful when labeling data is expensive.</li>
+        </ul>
+      </li>
+      <li><strong>Reinforcement Learning</strong>
+        <ul>
+          <li>Agents learn by interacting with an environment.</li>
+          <li>Goal: Maximize cumulative reward.</li>
+          <li>📌 Example: Game AI, robotics.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2 id="ml-workflow">🔁 ML Workflow</h2>
+    <ol>
+      <li>Define the Problem</li>
+      <li>Collect & Prepare Data</li>
+      <li>Explore Data (EDA)</li>
+      <li>Select Algorithm</li>
+      <li>Train Model</li>
+      <li>Evaluate Model</li>
+      <li>Tune Parameters</li>
+      <li>Deploy Model</li>
+      <li>Monitor and Maintain</li>
+    </ol>
+
+    <h2 id="popular-algorithms">🔍 Popular ML Algorithms</h2>
+    <table>
+      <thead>
+        <tr><th>Task</th><th>Algorithm</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Regression</td><td>Linear Regression, SVR, XGBoost</td></tr>
+        <tr><td>Classification</td><td>Logistic Regression, Decision Trees, SVM, k-NN</td></tr>
+        <tr><td>Clustering</td><td>K-Means, DBSCAN, Hierarchical</td></tr>
+        <tr><td>Dim. Reduction</td><td>PCA, t-SNE, LDA</td></tr>
+        <tr><td>Ensemble</td><td>Random Forest, Gradient Boosting</td></tr>
+        <tr><td>Deep Learning</td><td>CNN, RNN, Transformers</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="tools-libraries">🛠️ Tools and Libraries</h2>
+    <h3>🐍 Programming Language</h3>
+    <ul>
+      <li>Python (most popular for ML)</li>
+      <li>Others: R, Julia, Scala</li>
+    </ul>
+
+    <h3>📚 Python Libraries</h3>
+    <table>
+      <thead><tr><th>Category</th><th>Library</th></tr></thead>
+      <tbody>
+        <tr><td>Core ML</td><td>Scikit-learn</td></tr>
+        <tr><td>Deep Learning</td><td>TensorFlow, PyTorch</td></tr>
+        <tr><td>Data Handling</td><td>Pandas, NumPy</td></tr>
+        <tr><td>Visualization</td><td>Matplotlib, Seaborn</td></tr>
+        <tr><td>Model Deployment</td><td>Flask, FastAPI</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="hands-on">🧪 Hands-On: ML with Python</h2>
+    <p>We’ll create a simple classification model using Scikit-learn on the famous Iris Dataset.</p>
+
+    <h3>Step 1: Install Requirements</h3>
+    <pre><code>pip install scikit-learn pandas matplotlib</code></pre>
+
+    <h3>Step 2: Code Example</h3>
+    <pre><code>
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train model
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+
+# Predict
+y_pred = model.predict(X_test)
+
+# Evaluate
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("Report:\n", classification_report(y_test, y_pred))
+    </code></pre>
+
+    <h3>Output Example</h3>
+    <pre><code>
+Accuracy: 1.0
+Report:
+             precision    recall  f1-score   support
+
+          0       1.00      1.00      1.00         10
+          1       1.00      1.00      1.00         9
+          2       1.00      1.00      1.00        11
+
+   accuracy                           1.00        30
+    </code></pre>
+
+    <h2 id="challenges">⚠️ Common Challenges in ML</h2>
+    <ul>
+      <li>Overfitting / Underfitting</li>
+      <li>Data Imbalance</li>
+      <li>Insufficient / Noisy Data</li>
+      <li>Feature Engineering Complexity</li>
+      <li>Model Interpretability</li>
+      <li>Bias & Fairness in Data</li>
+    </ul>
+
+    <h2 id="next-steps">📈 Where to Go Next</h2>
+    <h3>📘 Learn More</h3>
+    <ul>
+      <li>Coursera – Andrew Ng’s ML Course</li>
+      <li>Google ML Crash Course</li>
+      <li>Kaggle Learn</li>
+    </ul>
+
+    <h3>📊 Practice Projects</h3>
+    <ul>
+      <li>Titanic Dataset (Kaggle)</li>
+      <li>MNIST Handwritten Digits</li>
+      <li>Movie Recommendation System</li>
+      <li>Stock Price Prediction</li>
+    </ul>
+
+    <h2 id="summary">✅ Summary</h2>
+    <ul>
+      <li>ML enables computers to learn from data.</li>
+      <li>It includes supervised, unsupervised, and reinforcement learning.</li>
+      <li>Tools like Scikit-learn, Pandas, and TensorFlow make development easier.</li>
+      <li>Start small, practice a lot, and build projects to improve.</li>
+    </ul>
+
+    <h2>🚀 Happy Learning!</h2>
+  </div>
+  <p>Feel free to reach out if you have any questions or need further assistance!</p>
