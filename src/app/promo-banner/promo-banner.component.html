@@ -1,0 +1,59 @@
+<div class="promo-banner">
+  <p
+    class="promo-text"
+    [class.paused]="isPaused"
+    aria-live="polite"
+  >
+    <ng-container [ngSwitch]="currentIndex">
+      <span *ngSwitchCase="0" id="promo-msg-0">
+        🚀 Unlock cost-effective software solutions today!  
+        <a 
+          id="promo-link-0"
+          href="https://accissi.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="promo-link"
+          [attr.aria-describedby]="'promo-msg-0'"
+        >
+          Explore accissi.com
+        </a>
+      </span>
+
+      <span *ngSwitchCase="1" id="promo-msg-1">
+        💡 Boost productivity with expert Software Development & Automation.  
+        <a 
+          id="promo-link-1"
+          href="https://accissi.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="promo-link"
+          [attr.aria-describedby]="'promo-msg-1'"
+        >
+          Discover accissi.com
+        </a>
+      </span>
+
+      <span *ngSwitchCase="2" id="promo-msg-2">
+        🎯 Advance your career with top-notch software training at unbeatable prices!  
+        <a 
+          id="promo-link-2"
+          href="https://accissi.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="promo-link"
+          [attr.aria-describedby]="'promo-msg-2'"
+        >
+          Learn more at accissi.com
+        </a>
+      </span>
+    </ng-container>
+  </p>
+
+  <button
+    type="button"
+    class="promo-toggle"
+    (click)="toggleAnimation()"
+  >
+    {{ isPaused ? 'Play animation' : 'Pause animation' }}
+  </button>
+</div>

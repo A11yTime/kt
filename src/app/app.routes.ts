@@ -9,6 +9,7 @@ import { VsCodeComponent } from './vs-code/vs-code.component';
 import { MlLearnComponent } from './ml-learn/ml-learn.component';
 import { DlComponent } from './dl/dl.component';
 import { NlpComponent } from './nlp/nlp.component';
+import { DataTypeComponent } from './data-type/data-type.component';
 
 export const routes: Routes = [
   {
@@ -38,6 +39,9 @@ export const routes: Routes = [
     { path: 'nlp', component: NlpComponent,
       data: { title: 'Natural Language Processing - Universal Approach' }
     },
+    { path: 'data-type', component: DataTypeComponent,
+      data: { title: 'Data Types - Universal Approach' }
+     }
     ]
   }
 ];

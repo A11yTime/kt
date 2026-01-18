@@ -1,0 +1,158 @@
+<div class="content-container">
+    <h1>🤖 Data Types in Machine Learning: What You Need to Know</h1>
+    <p>
+      When building machine learning models, understanding your data types is crucial. It affects how you clean, process,
+      and feed data into models. Choosing the wrong approach can lead to poor performance — or even errors during training.
+    </p>
+
+    <p>
+      In this article, we'll break down the main data types in machine learning, with examples to help you apply them in real projects.
+    </p>
+
+    <hr />
+    <h2>📂 1. Numerical Data (Quantitative)</h2>
+    <p>
+      Numerical data is measurable and consists of numbers that represent quantities.
+      Machine learning models love numerical data — they can easily learn patterns from numbers.
+    </p>
+
+    <h3>a. Discrete Data</h3>
+    <p><strong>Definition:</strong> Countable, finite values — usually integers.</p>
+    <ul>
+      <li>Number of purchases a user made</li>
+      <li>Number of children in a household</li>
+      <li>Count of website visits</li>
+    </ul>
+    <pre>feature = [1, 3, 5, 2, 0]  // Discrete</pre>
+
+    <h3>b. Continuous Data</h3>
+    <p><strong>Definition:</strong> Measurable data that can take any real number value.</p>
+    <ul>
+      <li>Height, weight, temperature</li>
+      <li>Income, price, time taken to complete a task</li>
+    </ul>
+    <pre>feature = [12.5, 13.0, 14.75, 11.2]  // Continuous</pre>
+
+    <p><strong>📌 ML Note:</strong> Most ML algorithms (e.g., Linear Regression, SVMs, Neural Networks) expect continuous numerical inputs.</p>
+
+    <hr />
+    <h2>🏷️ 2. Categorical Data (Nominal)</h2>
+    <p>Categorical data represents groups or labels, not numbers. These cannot be compared mathematically.</p>
+    <ul>
+      <li>Gender: Male, Female, Other</li>
+      <li>City: London, Paris, Tokyo</li>
+      <li>Product category: Electronics, Clothing, Food</li>
+    </ul>
+    <pre>feature = ['Male', 'Female', 'Male', 'Other']</pre>
+
+    <p><strong>🔄 Preprocessing Tip:</strong></p>
+    <ul>
+      <li><strong>One-Hot Encoding:</strong> Creates binary columns (best for non-ordinal data)</li>
+      <li><strong>Label Encoding:</strong> Assigns numeric values (only when the order matters or model can handle it, e.g., tree-based models)</li>
+    </ul>
+
+    <hr />
+    <h2>🔢 3. Ordinal Data</h2>
+    <p>
+      Ordinal data is categorical with a clear order. However, the difference between the levels is not necessarily uniform.
+    </p>
+    <ul>
+      <li>Satisfaction levels: Very Unsatisfied, Unsatisfied, Neutral, Satisfied, Very Satisfied</li>
+      <li>Education level: High School, Bachelor, Master, PhD</li>
+      <li>Ratings: Low, Medium, High</li>
+    </ul>
+    <pre>feature = ['Low', 'Medium', 'High']</pre>
+
+    <p><strong>🔄 Preprocessing Tip:</strong></p>
+    <ul>
+      <li>Use Label Encoding with care. The order matters (e.g., Low = 1, Medium = 2, High = 3)</li>
+    </ul>
+    <p><strong>⚠️ Be cautious:</strong> Not all ML models can interpret these numbers as “ordered.” For linear models, treating ordinal data as continuous can be misleading.</p>
+
+    <hr />
+    <h2>🧪 Why Does This Matter in Machine Learning?</h2>
+    <p>Let’s look at a real-world dataset example — predicting house prices.</p>
+
+    <table border="1" cellpadding="6">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Example Value</th>
+          <th>Data Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Number of bedrooms</td><td>3</td><td>Numerical (Discrete)</td></tr>
+        <tr><td>Area (sq ft)</td><td>1800.5</td><td>Numerical (Continuous)</td></tr>
+        <tr><td>Location</td><td>"Downtown"</td><td>Categorical</td></tr>
+        <tr><td>Condition</td><td>"Excellent"</td><td>Ordinal</td></tr>
+        <tr><td>Price</td><td>$250,000</td><td>Numerical (Continuous - Target)</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>What you’d do:</strong></p>
+    <ul>
+      <li>Normalize or scale continuous features</li>
+      <li>One-hot encode the categorical features</li>
+      <li>Label encode ordinal features (if the model supports it)</li>
+      <li>Feed all transformed data into the ML model</li>
+    </ul>
+
+    <hr />
+    <h2>💡 Summary</h2>
+    <table border="1" cellpadding="6">
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Subtype</th>
+          <th>Description</th>
+          <th>Examples</th>
+          <th>Preprocessing for ML</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Numerical</td>
+          <td>Discrete</td>
+          <td>Counted numbers</td>
+          <td>No. of products sold</td>
+          <td>Use as-is or scale</td>
+        </tr>
+        <tr>
+          <td>Numerical</td>
+          <td>Continuous</td>
+          <td>Measured values</td>
+          <td>Weight, price</td>
+          <td>Normalize/scale</td>
+        </tr>
+        <tr>
+          <td>Categorical</td>
+          <td>Nominal</td>
+          <td>Labels without order</td>
+          <td>Gender, color</td>
+          <td>One-Hot Encode</td>
+        </tr>
+        <tr>
+          <td>Categorical</td>
+          <td>Ordinal</td>
+          <td>Labels with order</td>
+          <td>Ratings, education</td>
+          <td>Label Encode</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+    <h2>🚀 Final Thoughts</h2>
+    <p>
+      In machine learning, knowing your data type isn’t just good practice — it’s essential.
+      It ensures that your models can learn efficiently and make accurate predictions.
+    </p>
+    <blockquote>“Garbage in, garbage out.” — Feeding improperly processed data into a machine learning model can result in meaningless predictions.</blockquote>
+    <p><strong>Before diving into model selection or training:</strong></p>
+    <ul>
+      <li>Explore your data</li>
+      <li>Identify data types</li>
+      <li>Preprocess accordingly</li>
+    </ul>
+</div>
